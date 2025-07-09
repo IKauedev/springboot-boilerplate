@@ -2,6 +2,7 @@ package com.spring.boilerplate.springboot.model;
 
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "USERS")
 public class User {
 
@@ -19,7 +20,6 @@ public class User {
     private UserRole userRole;
 
     public User(Long id, String name, String username, String password, String email, UserRole userRole) {
-        super();
         this.id = id;
         this.name = name;
         this.username = username;

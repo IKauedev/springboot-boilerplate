@@ -19,10 +19,7 @@ public class LoginController {
     @PostMapping
     @Operation(tags = "Login Service", description = "You must log in with the correct information to successfully obtain the token information.")
     public ResponseEntity<LoginResponse> loginRequest(@Valid @RequestBody LoginRequest loginRequest) {
-
         final LoginResponse loginResponse = jwtTokenService.getLoginResponse(loginRequest);
-
         return ResponseEntity.ok(loginResponse);
     }
-
 }
